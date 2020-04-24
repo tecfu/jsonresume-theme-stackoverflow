@@ -2,7 +2,7 @@
 
 **Printable version with custom CSS**
 
-[DEMO](https://themes.jsonresume.org/stackoverflow)
+[DEMO](https://themes.jsonresume.org/theme/stackoverflow)
 
 ## Getting started
 
@@ -15,19 +15,16 @@ The official [resume-cli](https://github.com/jsonresume/resume-cli) to run the d
 Go ahead and install it:
 
 ```
-sudo npm install -g resume-cli
+npm install -g resume-cli
 ```
+
 ### Install and serve theme
 
-This is a theme for JSON Resume. It is available via npm:
+Clone the repository
 
 ```
-npm install jsonresume-theme-stackoverflow
+git clone https://github.com/francescoes/jsonresume-theme-stackoverflow.git
 ```
-
-then change directory: 
-
-`cd node_modules/jsonresume-theme-stackoverflow/`
 
 And simply run:
 
@@ -41,6 +38,8 @@ You should now see this message:
 Preview: http://localhost:4000
 Press ctrl-c to stop
 ```
+
+To build your own resume, create a 'resume.json' file in the current folder and follow the [json resume schema](https://jsonresume.org/schema/)
 
 ### Social Profiles Icons
 
@@ -63,9 +62,9 @@ example of the extra `location` object:
 
 ```
 "location": {
-	"city": "Zürich",
-	"countryCode": "CH",
-	"region": "Switzerland"
+  "city": "Zürich",
+  "countryCode": "CH",
+  "region": "Switzerland"
 } 
 ```
 example of the extra `birth` object:

@@ -1,9 +1,18 @@
 const moment = require('moment');
 
 const dateHelpers = {
-  MY: date => moment(date.toString(), ['YYYY-MM-DD']).format('MMM YYYY'),
-  Y: date => moment(date.toString(), ['YYYY-MM-DD']).format('YYYY'),
-  DMY: date => moment(date.toString(), ['YYYY-MM-DD']).format('D MMM YYYY')
+  MY: date => {
+    let result = moment(date.toString(), ['YYYY-MM-DD']) 
+    return result.isValid() ? result.format('MMM YYYY') : date
+  },
+  Y: date => {
+    let result = moment(date.toString(), ['YYYY-MM-DD']) 
+    return result.isValid() ? result.format('YYYY') : date
+  },
+  DMY: date => {
+    let result = moment(date.toString(), ['YYYY-MM-DD'])
+    return result.isValid() ? result.format('D MMM YYYY') : date
+  }
 };
 
 module.exports = { dateHelpers };

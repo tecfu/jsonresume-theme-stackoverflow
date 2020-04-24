@@ -7,7 +7,7 @@
 			<h2 class="label">{{label}}</h2>
 		</div>
 		{{else}}
-		<div>
+		<div class="no-image">
 			<h1 class="name">{{name}}</h1>
 			<h2 class="label">{{label}}</h2>
 		</div>
@@ -81,8 +81,8 @@
 
 	{{#if summary}}
 	<section class="section">
-		<section class="main-summary">
-			<div>{{paragraphSplit summary}}</div>
+		<section class="main-summary bs-callout bs-callout-info bs-callout-md">
+      {{paragraphSplit summary}}
 		</section>
 	</section>
 	{{/if}}

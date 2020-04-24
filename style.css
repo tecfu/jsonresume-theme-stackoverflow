@@ -242,7 +242,7 @@ section .location {
 }
 
 #header h1.name {
-  font-size: 2rem;
+  font-size: 26px;
   font-weight: 100;
   line-height: 100%;
   text-transform: uppercase;
@@ -252,7 +252,7 @@ section .location {
 
 #header h2.label {
   color: #202931;
-  font-size: 1.1rem;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: right;
@@ -699,91 +699,6 @@ section .location {
   opacity: 1 !important;
 }
 
-/****************
-*		TABLET
-****************/
-
-@media screen and (min-width: 602px) {
-  #resume {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .section header .date {
-    float: right;
-    font-weight: 600;
-    color: #000;
-  }
-}
-
-/****************
-*		LAPTOP
-****************/
-
-@media screen and (min-width: 1025px) {
-  li {
-    margin-left: 1.5em;
-  }
-  #resume {
-    width: 820px;
-    margin: 2rem auto;
-  }
-  .section > section > header .space-left {
-    opacity: 1;
-    cursor: pointer;
-  }
-  .section > section:not(.main-summary) {
-    margin-left: 1.67rem;
-  }
-  .toggle-item {
-    transform: translate(-9999px);
-  }
-  .toggle-item + label {
-    display: block;
-  }
-  .toggle-item:checked + label:after {
-    content: "\f0d7";
-  }
-  .toggle-item + label:after {
-    float: left;
-    cursor: pointer;
-    margin-left: -20px;
-    color: #aaa;
-    font-size: 16px;
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    content: "\f0da";
-  }
-  .toggle-item ~ .item {
-    height: 0;
-    opacity: 0;
-  }
-  .toggle-item:checked ~ .item {
-    height: auto;
-    opacity: 1;
-    transition: all 0.5s linear;
-  }
-  .company::before,
-  .institution::before,
-  .organization::before,
-  .awarder::before {
-    content: "| ";
-  }
-  .header-left {
-    float: left;
-    width: 70%;
-    word-break: normal;
-  }
-  .section header .date {
-    padding: 0.2em;
-  }
-  .display {
-    display: none;
-  }
-  .display:not(.none) {
-    display: block;
-  }
-}
-
 @media print {
   #resume {
     margin: 0.1em;
@@ -795,19 +710,14 @@ section .location {
   @page {
     margin: 1cm 1.4cm;
   }
-  .item-count {
-    display: none;
-  }
+  
   .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
-    content: "at ";
+    content: "| ";
   }
-  .main-summary {
-    padding: 0;
-    background: transparent;
-  }
+  
   .section {
     margin: 0.8rem 0;
     padding: 0;
@@ -824,9 +734,7 @@ section .location {
   .section > section > section:last-of-type {
     margin: 0;
   }
-  .stack-overflow::after {
-    content: "";
-  }
+ 
   .fa.social {
     color: #828386;
   }
@@ -836,36 +744,6 @@ section .location {
   ul,
   li {
     padding: 0;
-  }
-  ul.keywords li,
-  ul.courses li {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8rem;
-    background: transparent;
-  }
-  ul.keywords li::after,
-  ul.courses li::after {
-    padding: 0 0 0 0.1rem;
-    content: " |";
-  }
-  ul.keywords::before,
-  ul.courses::before {
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  #skills .item {
-    width: calc(100% / 3);
-    padding: 0;
-  }
-  .highlights {
-    margin: 0.5em 0 0 0;
-  }
-  ul.keywords::before {
-    content: "Skills acquired: ";
-  }
-  #skills .keywords::before {
-    content: none;
   }
   .section p {
     margin: 0;
@@ -881,9 +759,6 @@ section .location {
   .level em {
     font-style: normal;
     padding: 0.1em 0;
-  }
-  .level .bar {
-    display: none;
   }
   #profiles .item {
     padding: 0;

@@ -734,7 +734,9 @@ section .location {
   .section > section > section:last-of-type {
     margin: 0;
   }
- 
+  .item-count {
+    display: none;
+  }
   .fa.social {
     color: #828386;
   }

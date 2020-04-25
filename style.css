@@ -200,7 +200,7 @@ strong {
 /* every section wrapper */
 
 .section {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 section .location {
@@ -213,8 +213,17 @@ section .location {
   margin-top: 0.5rem;
 }
 
+#contact > div {
+  display: inline;
+  padding-left: 10px;
+}
+
 #profiles .item {
   padding: 0;
+}
+
+#header {
+  margin-bottom: 1em;
 }
 
 #header > #profiles,
@@ -242,7 +251,7 @@ section .location {
 }
 
 #header h1.name {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 100;
   line-height: 100%;
   text-transform: uppercase;
@@ -264,18 +273,18 @@ section .location {
   border-radius: 4px;
 }
 
-#header .no-image {
+.header-container {
   display: table;
   width: 100%;
 }
 
-#header .no-image > h1,
-#header .no-image > h2 {
+.header-container > .header-left,
+.header-container > .header-right{
   display: table-cell;
   width: 50%;
 }
 
-#header .no-image > h2 {
+.header-container > .header-right{
   text-align: right;
   vertical-align: top;
 }
@@ -344,11 +353,38 @@ section .location {
   opacity: 0;
 }
 
+.info-container {
+  display: table;
+  width: 100%;
+}
+
+.info-right, .info-left {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.info-left {
+  width: 85%;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.info-right {
+  width: 15%;
+  vertical-align: middle;
+}
+/* Logo */
+
+.info-right > img {
+  height: 80px;  
+  width: 80px;
+}
+
+
 .position,
 .company,
 .organization,
 .institution,
-.date,
 .area,
 .studyType,
 .title,
@@ -369,7 +405,7 @@ section .location {
 .institution::before,
 .organization::before,
 .awarder::before {
-  content: "at ";
+  content: "| ";
 }
 
 .company,
@@ -381,11 +417,12 @@ section .location {
 }
 
 .section header .date {
-  display: block;
   font-size: 1rem;
-  padding: 0.1em 0;
-  color: #606d76;
-  font-weight: 400;
+  font-weight: bold;
+}
+
+section#work .summary > p {
+  color: #333;
 }
 
 .keywords,
@@ -417,7 +454,7 @@ section .location {
 }
 
 .highlights > li > p {
-  margin-bottom: 0.5em;
+  /* margin-bottom: 0.5em; */
 }
 
 .item {
@@ -440,12 +477,17 @@ section .location {
 
 .bs-callout {
   padding: 10px;
-  border: 1px solid #eee;
+  border: 0px solid #eee;
   border-left-width: 5px;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 .bs-callout-xl {
   margin-left: 0px;
+}
+.bs-callout-xs { 
+  padding: 4px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
 }
 .bs-callout h4 {
   margin-top: 0;
@@ -481,14 +523,18 @@ section .location {
   color: #5cb85c;
 }
 .bs-callout-danger {
-  border-left-color: #d9534f;
-  background-color: #fcf2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-color: red;
+  border-left-color: #333;
+  background-color: red;
+  color: white;
 }
 .bs-callout-danger h4 {
   color: #d9534f;
 }
 .bs-callout-warning {
-  border-left-color: #f0ad4e;
+  border-left-color: #ff6d1f;
   background-color: #fefbed;
 }
 .bs-callout-warning h4 {
@@ -501,6 +547,7 @@ section .location {
 .bs-callout-info h4 {
   color: #5bc0de;
 }
+
 /* bg transparency and disabled effects for Bootstrap callout */ 
 .bs-callout-default.transparent {
   background-color: rgb(247, 247, 249, 0.7); /*#f7f7f9*/
@@ -610,7 +657,8 @@ section .location {
 #skills .item,
 #interests .item {
   width: 15em;
-  padding: 0 0.5em 0.5em 0;
+  /*padding: 0 0.5em 0.5em 0;*/
+  padding: 0;
   border-bottom: none;
 }
 
@@ -650,13 +698,13 @@ section .location {
 }
 
 .level.beginner .bar::after {
-  background: #eb5f51;
+  background: #5cb85c;
   width: 2.5em;
 }
 
 .level.intermediate .bar::after {
-  background: #ffdf1f;
-  width: 5em;
+  background: #5cb85c;
+  width: 6.5em;
 }
 
 .level.advanced .bar::after,
@@ -667,7 +715,7 @@ section .location {
 
 .level.master .bar::after,
 .level.native.speaker .bar::after {
-  background: #59c596;
+  background: #5cb85c;
   width: 10em;
 }
 
@@ -681,7 +729,7 @@ section .location {
 }
 
 .section > section > section {
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; /*
 }
 
 /******************
@@ -729,7 +777,7 @@ section .location {
     padding-bottom: 0.15rem;
   }
   .section > section > section {
-    margin: 0 0 1em 0;
+    margin: 0 0 0 0;
   }
   .section > section > section:last-of-type {
     margin: 0;

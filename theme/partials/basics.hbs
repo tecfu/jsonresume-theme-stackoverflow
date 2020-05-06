@@ -80,7 +80,7 @@
 
   {{#if summary}}
   <section class="section">
-    <section class="main-summary bs-callout bs-callout-default bs-callout-md">
+    <section class="main-summary bs-callout bs-callout-{{#if summaryStyle}}{{summaryStyle}}{{else}}warning{{/if}} bs-callout-md">
       {{paragraphSplit summary}}
     </section>
   </section>

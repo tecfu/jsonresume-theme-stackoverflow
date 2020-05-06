@@ -137,6 +137,7 @@ table {
 
 body,
 html {
+  margin: 1em .5em 0 .5em;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 13px;
   color: #40484f;

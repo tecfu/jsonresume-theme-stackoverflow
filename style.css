@@ -139,7 +139,7 @@ body,
 html {
   margin: 1em .5em 0 .5em;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   color: #40484f;
   font-weight: 400;
   letter-spacing: 0;
@@ -229,9 +229,9 @@ section .location {
 
 #header > #profiles,
 #header > #contact,
-#skills,
-#languages,
-#interests {
+#skills section,
+#languages section,
+#interests section {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -750,7 +750,7 @@ section#work .summary > p {
 
 @media print {
   #resume {
-    margin: 0.1em;
+    margin: 1em;
     padding: 0.1em;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
@@ -759,7 +759,7 @@ section#work .summary > p {
   @page {
     margin: 1cm 1.4cm;
   }
-  
+
   .company::before,
   .institution::before,
   .organization::before,
